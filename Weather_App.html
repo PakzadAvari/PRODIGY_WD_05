@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="Weather_App.css">
+    <link rel="shortcut icon" href="icon/favicon-16x16.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        
+        <div class="search-container">
+            <input type="text" id="location-input" placeholder="Enter city name...">
+            <button id="search-btn">Search</button>
+            <button id="location-btn" class="location-btn">Use My Location</button>
+        </div>
+        
+        <div id="loading" class="loading">
+            <p>Loading weather data...</p>
+        </div>
+        
+        <div id="error" class="error">
+            <p>Could not fetch weather data. Please try again.</p>
+        </div>
+        
+        <div id="weather-container" class="weather-container">
+            <h2 id="location">City Name</h2>
+            
+            <div class="time-container">
+                <div class="current-time" id="current-time">12:00 PM</div>
+                <div class="current-date" id="current-date">Monday, January 1, 2025</div>
+            </div>
+            
+            <div class="weather-icon">
+                <img id="weather-icon" src="/api/placeholder/100/100" alt="Weather Icon">
+            </div>
+            <div class="temperature" id="temperature">--°C</div>
+            <div class="time-of-day" id="time-of-day">☁️ Clouds</div>
+            
+            <div class="details">
+                <div class="detail-box">
+                    <h4>🌡️ Feels Like</h4>
+                    <p id="feels-like">--°C</p>
+                </div>
+                <div class="detail-box">
+                    <h4>💧 Humidity</h4>
+                    <p id="humidity">--%</p>
+                </div>
+                <div class="detail-box">
+                    <h4>💨 Wind Speed</h4>
+                    <p id="wind-speed">-- m/s</p>
+                </div>
+                <div class="detail-box">
+                    <h4>📊 Pressure</h4>
+                    <p id="pressure">-- hPa</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="Weather_App.js"></script>
+</body>
+</html>
